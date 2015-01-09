@@ -12,3 +12,8 @@ hpc_data2 <- mutate(Time = hms(hpc_data$Time))
 
 hpc_data3 <- mutate(hpc_data, Date_Time = paste(Date, Time))
 
+#plot 2:
+png(filename = "~/plot2.png")
+plot(hpc_data3$Date_Time, hpc_data3$Global_active_power, type = "l", xlab="",
+     ylab="Global Active Power (kilowatts)")
+dev.off()
